@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { Newsreader, Source_Sans_3 } from "next/font/google";
 import "./globals.css";
 import Header from "@/components/Header";
+import Footer from "@/components/Footer";
 import StickyCTA from "@/components/StickyCTA";
 
 const newsreader = Newsreader({ 
@@ -29,6 +30,7 @@ export default function RootLayout({
       <body className={`${newsreader.variable} ${sourceSans.variable}`}>
         <Header />
         {children}
+        <Footer />
         <StickyCTA />
       </body>
     </html>
