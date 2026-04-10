@@ -53,6 +53,7 @@ export default function Footer({ locale = 'en' }: { locale?: string }) {
             <li><Link href={isArabic ? "/ar/faq" : "/faq"} className="hover:text-white transition-colors">{isArabic ? "الأسئلة الشائعة" : "FAQs"}</Link></li>
             <li><Link href={isArabic ? "/ar/privacy-policy" : "/privacy-policy"} className="hover:text-white transition-colors">{isArabic ? "سياسة الخصوصية" : "Privacy Policy"}</Link></li>
             <li><Link href={isArabic ? "/ar/terms-of-service" : "/terms-of-service"} className="hover:text-white transition-colors">{isArabic ? "شروط الخدمة" : "Terms of Service"}</Link></li>
+            <li><Link href="/sitemap.xml" className="hover:text-white transition-colors border border-gray-600 px-3 py-1 rounded inline-block">{isArabic ? "خريطة الموقع (Sitemap)" : "XML Sitemap"}</Link></li>
           </ul>
         </div>
       </div>
