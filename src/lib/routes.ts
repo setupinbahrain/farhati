@@ -123,5 +123,12 @@ export const SILO_PAGES = [
   "how-to-choose-a-flower-bouquet",
   "same-day-delivery-guide-bahrain",
   "gift-guide-for-every-occasion-bahrain",
-  "flowers-vs-chocolates-vs-cakes-best-gift-guide"
+  "flowers-vs-chocolates-vs-cakes-best-gift-guide",
+
+  // Core Platform Pages (Fixing 404 Navigation Errors)
+  "contact-us",
+  "about-us",
+  "faq",
+  "privacy-policy",
+  "terms-of-service"
 ];
