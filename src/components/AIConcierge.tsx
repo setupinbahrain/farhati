@@ -4,7 +4,11 @@ import { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { Sparkles, X, Send } from 'lucide-react';
 
-export default function AIConcierge({ locale = 'en' }: { locale?: string }) {
+import { useParams } from 'next/navigation';
+
+export default function AIConcierge() {
+  const params = useParams();
+  const locale = params?.locale || 'en';
   const isArabic = locale === 'ar';
   const [isOpen, setIsOpen] = useState(false);
   const [input, setInput] = useState('');

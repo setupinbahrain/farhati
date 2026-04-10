@@ -1,8 +1,11 @@
 "use client";
 
 import React from 'react';
+import { useParams } from 'next/navigation';
 
-export default function StickyCTA({ locale = 'en' }: { locale?: string }) {
+export default function StickyCTA() {
+  const params = useParams();
+  const locale = params?.locale || 'en';
   const isArabic = locale === 'ar';
 
   return (

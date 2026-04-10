@@ -3,7 +3,11 @@
 import { MessageCircle } from "lucide-react";
 import { motion } from "framer-motion";
 
-export default function FloatingWhatsApp({ locale = 'en' }: { locale?: string }) {
+import { useParams } from 'next/navigation';
+
+export default function FloatingWhatsApp() {
+  const params = useParams();
+  const locale = params?.locale || 'en';
   const isArabic = locale === 'ar';
   const whatsappNumber = "+97333333333";
   const message = isArabic ? "مرحباً فرحتي! أحتاج إلى مساعدة في طلب هدية فاخرة اليوم." : "Hello Farhati! I need a luxury gift delivered today.";

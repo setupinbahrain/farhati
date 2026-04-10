@@ -42,12 +42,12 @@ export default function RootLayout({
   return (
     <html lang={locale} dir={locale === 'ar' ? 'rtl' : 'ltr'}>
       <body className={`${newsreader.variable} ${sourceSans.variable}`}>
-        <Header locale={locale} />
+        <Header />
         {children}
         <Footer locale={locale} />
-        <StickyCTA locale={locale} />
-        <AIConcierge locale={locale} />
-        <FloatingWhatsApp locale={locale} />
+        <StickyCTA />
+        <AIConcierge />
+        <FloatingWhatsApp />
       </body>
     </html>
   );

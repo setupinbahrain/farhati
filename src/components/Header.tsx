@@ -6,8 +6,11 @@ import { useState } from "react";
 import { useCartStore } from "@/lib/store";
 import { ShoppingBag, Menu, X, Trash2, Globe } from "lucide-react";
 import { motion, AnimatePresence } from "framer-motion";
+import { useParams } from "next/navigation";
 
-export default function Header({ locale }: { locale: string }) {
+export default function Header() {
+  const params = useParams();
+  const locale = params?.locale || 'en';
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   
   // Checkout Form State
