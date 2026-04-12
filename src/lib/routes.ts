@@ -1,9 +1,6 @@
 export const SILO_PAGES = [
   // 12 Tier 1 Money Pages
-  "flowers-delivery-bahrain",
   "flower-bouquets-bahrain",
-  "cake-delivery-bahrain",
-  "chocolate-delivery-bahrain",
   "gift-delivery-bahrain",
   "flowers-and-cake-delivery-bahrain",
   "flowers-and-chocolates-delivery-bahrain",
@@ -11,7 +8,6 @@ export const SILO_PAGES = [
   "same-day-gift-delivery-bahrain",
   "birthday-gifts-delivery-bahrain",
   "online-gift-shop-bahrain",
-  "luxury-gifts-bahrain",
 
   // Foundation Pages 
   "same-day-delivery-bahrain",

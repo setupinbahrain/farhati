@@ -2,11 +2,13 @@
 
 import { motion } from "framer-motion";
 import { useCartStore } from "@/lib/store";
+import { usePathname } from 'next/navigation';
 
 import Image from "next/image";
 
 export default function ProductGrid({ title, baseTitle, locale = 'en' }: { title: string, baseTitle?: string, locale?: string }) {
   const isArabic = locale === 'ar';
+  const pathname = usePathname() || '';
   const products = Array.from({ length: 12 }, (_, i) => i + 1);
   const { addItem } = useCartStore();
 
@@ -24,7 +26,7 @@ export default function ProductGrid({ title, baseTitle, locale = 'en' }: { title
   };
 
   const titleLower = title.toLowerCase();
-  const checkStr = `${titleLower} ${baseTitle?.toLowerCase() || ''}`;
+  const checkStr = `${pathname.toLowerCase()} ${titleLower} ${baseTitle?.toLowerCase() || ''}`;
   const isCake = checkStr.includes('cake') || checkStr.includes('كيك');
   const isFlower = checkStr.includes('flower') || checkStr.includes('bouquet') || checkStr.includes('rose') || checkStr.includes('زهور') || checkStr.includes('ورد');
   const isCombo = checkStr.includes('combo') || checkStr.includes('and') || checkStr.includes('باقات');
@@ -65,12 +67,11 @@ export default function ProductGrid({ title, baseTitle, locale = 'en' }: { title
   const translateProductType = (key?: string) => {
     if (!key) return title;
     if (!isArabic) return key.charAt(0).toUpperCase() + key.slice(1).replace(/-/g, ' ');
-    const k = key.toLowerCase();
-    if (k.includes('flower')) return 'الزهور';
-    if (k.includes('cake')) return 'الكيك';
-    if (k.includes('chocolate')) return 'الشوكولاتة';
-    if (k.includes('birthday')) return 'أعياد الميلاد';
-    if (k.includes('gift') || k.includes('luxury')) return 'الهدايا الفاخرة';
+    if (checkStr.includes('flower')) return 'الزهور';
+    if (checkStr.includes('cake')) return 'الكيك';
+    if (checkStr.includes('chocolate')) return 'الشوكولاتة';
+    if (checkStr.includes('birthday')) return 'أعياد الميلاد';
+    if (checkStr.includes('gift') || checkStr.includes('luxury')) return 'الهدايا الفاخرة';
     return title;
   };
   const productKeyName = translateProductType(baseTitle || title);
