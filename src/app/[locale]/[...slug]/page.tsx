@@ -27,6 +27,13 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
     return {
       title: isArabic ? `${baseTitle} | متجر فرحتي للهدايا` : `${baseTitle} | Premium Farhati Gifting`,
       description: isArabic ? `اطلب ${baseTitle} مع فرحتي. توصيل في نفس اليوم لجميع مناطق البحرين!` : `Order the best ${englishTitle.toLowerCase()} with Farhati. Same-day delivery across all locations in Bahrain!`,
+      alternates: {
+        languages: {
+          'en': `/${pageSlug}`,
+          'ar': `/ar/${pageSlug}`,
+          'x-default': `/${pageSlug}`,
+        }
+      }
     };
   } else if (slugArray.length === 2) {
     const citySlug = slugArray[0];
@@ -43,6 +50,13 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
     return {
       title: isArabic ? `${baseTitle} إلى ${cityName} | فرحتي` : `${englishTitle} Delivery in ${englishCity} | Premium Farhati Gifting`,
       description: isArabic ? `احجز ${baseTitle} بتوصيل مباشر لمعظم مناطق ${cityName}. تسوق الهدايا الفاخرة المضمونة لتدلل من تحب.` : `Order the best ${englishTitle.toLowerCase()} directly to ${englishCity}. We offer rapid, climate-controlled same-day delivery exclusively across ${englishCity}!`,
+      alternates: {
+        languages: {
+          'en': `/${citySlug}/${pageSlug}`,
+          'ar': `/ar/${citySlug}/${pageSlug}`,
+          'x-default': `/${citySlug}/${pageSlug}`,
+        }
+      }
     };
   }
 

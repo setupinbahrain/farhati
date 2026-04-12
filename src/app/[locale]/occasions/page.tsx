@@ -25,7 +25,7 @@ export default function OccasionsDirectory() {
       <section className="text-center px-4 max-w-4xl mx-auto mt-16 mb-20 animate-float-slow">
          <h1 className="text-5xl md:text-7xl font-heading font-black text-primary mb-6 drop-shadow-sm">Life&apos;s Masterpieces.</h1>
          <p className="text-xl text-gray-500 font-body leading-relaxed max-w-2xl mx-auto">
-            We categorize our $1 Billion inventory into the milestones that matter. Select your occasion below and unlock highly curated ecosystems of luxury.
+            We categorize our finest, globally sourced inventory into the milestones that matter. Select your occasion below and unlock highly curated ecosystems of luxury.
          </p>
       </section>
 

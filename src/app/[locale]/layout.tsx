@@ -17,8 +17,16 @@ const sourceSans = Source_Sans_3({
 });
 
 export const metadata: Metadata = {
+  metadataBase: new URL('https://farhati.bh'),
   title: "Deliver Gifts, Flowers & Cakes in Bahrain | Farhati",
   description: "Bahrain's leading gifting platform",
+  alternates: {
+    languages: {
+      'en': '/',
+      'ar': '/ar',
+      'x-default': '/',
+    },
+  },
 };
 
 import { locales } from "@/i18n";
