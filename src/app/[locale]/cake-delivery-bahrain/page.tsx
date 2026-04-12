@@ -55,6 +55,26 @@ export default function CakeDeliveryPage({ params }: { params: { locale: string 
 
       <ProductGrid title={isArabic ? "توصيل كيك" : "Cake Delivery"} baseTitle="cake" locale={params.locale} />
 
+      <section className="py-16 px-4 bg-trust text-white max-w-7xl mx-auto rounded-3xl my-12 shadow-2xl">
+         <div className="max-w-4xl mx-auto space-y-6">
+            <h2 className="text-3xl font-heading font-bold mb-6">{isArabic ? "الكيك الحرفي الفاخر: تحفة فنية في البحرين" : "Artisanal Luxury Cakes: The Gold Standard in Bahrain"}</h2>
+            <div className="text-gray-100 space-y-6 text-lg leading-relaxed font-body">
+               <p>{isArabic ? 
+                  "نحن في فرحتي نفخر بأنفسنا لكوننا الوجهة الأولى للكيك المخبوز ببراعة وشغف. بالنسبة لنا، الكعكة ليست مجرد حلوى، بل هي المركز الأساسي لأي احتفال استثنائي. هذا التوجه يدفعنا لاستخدام مكونات ذات جودة استثنائية، بدءًا من الكاكاو البلجيكي الخالص المستخدم في خلطاتنا، إلى فانيلا مدغشقر الطازجة، لضمان إنتاج قطعة فنية لا تُضاهى شكلاً ومذاقاً للمناسبات في أي منطقة من مناطق البحرين." 
+                  : 
+                  "At Farhati, we pride ourselves on being the premier destination for masterfully baked, artisanal cakes. To us, a cake is never just a dessert; it is the absolute epicenter of an exceptional celebration. This core philosophy completely mandates our use of aggressively high-quality ingredients. From the pure, unadulterated Belgian cocoa infused into our sponges, to the authentic Madagascar vanilla beans, our entire baking process is designed to produce an unparalleled gustatory and visual masterpiece for events anywhere in Bahrain."}</p>
+               <p>{isArabic ? 
+                  "يُعد الاهتمام بالتفاصيل سمة رئيسية تميز قسم المخبوزات لدينا. كل تصميم يرتكز على دقة هندسية عالية؛ حيث يُراعى فيه تناسق التزيين ومثالية القوام. هذا ليس مجرد إنتاج تجاري، بل عملية حرفية خالصة لا تقبل بوجود أي مخزون كيك مسبق التجميد. نقوم دائماً بخبز المنتجات يومياً للحفاظ على طراوتها وقوة قوامها. إذا كنت تبحث عن كيك مصمم لزفاف في الجفير أو حفل ذكرى سنوية في السيف، فإن جودتنا ستلبي حتى أكثر المتطلبات صرامة."
+                  : 
+                  "Attention to detail defines our master baking division. Every single structural design and frosting technique is executed with architectural precision. This is not mass-market commercial production; it is pure culinary artistry that strictly forbids the use of pre-frozen inventory. We exclusively bake on demand, ensuring your cake achieves maximum sponge integrity and flavor depth. Whether you require an elaborate, multi-tiered wedding cake for a reception in Juffair or a dense, rich truffle cake for an anniversary in Seef, our quality standards satisfy the most rigorous palates."}</p>
+               <p>{isArabic ?
+                  "ولأن درجات الحرارة المرتفعة تشكل تحدياً كبيراً، فقد ابتكرنا حلاً لوجستياً مثالياً يعتمد حصرياً على مركبات معزولة حرارياً. بفضل أسطولنا المبرد القوي، نضمن أن كل طلبية يتم التوصيل دون أن تنصهر تزييناتها أو يتغير طعمها. فريقنا للتوصيل يفهم مدى هشاشة وحساسية هذه المنتجات المصنوعة يدوياً، ويستخدم إجراءات تخفيف الصدمات القاسية أثناء رحلته عبر شوارع المنامة لتسليم طلبك بأمان لا مثيل له."
+                  :
+                  "Because high gradients of ambient temperature actively threaten luxury baked goods, we have engineered an elite logistical response. Operating exclusively via heavy-duty, thermal-controlled vehicles, we guarantee that the icing remains perfectly stablilized and the structural integrity undisturbed. Our dispatch team intuitively grasps the extreme physical fragility of these handcrafted cakes and executes severe shock-mitigation protocols while navigating the streets of Manama, resulting in a delivery experience characterized by absolute safety and zero compromises."}</p>
+            </div>
+         </div>
+      </section>
+
       <section className="py-16 bg-white px-4">
          <div className="max-w-3xl mx-auto" itemScope itemType="https://schema.org/FAQPage">
             <h2 className="text-3xl font-heading font-bold mb-8 text-center">{isArabic ? "أسئلة شائعة حول توصيل الكيك" : "Cake Delivery FAQs"}</h2>

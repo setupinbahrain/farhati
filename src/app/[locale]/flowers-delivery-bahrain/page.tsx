@@ -55,6 +55,26 @@ export default function FlowersDeliveryPage({ params }: { params: { locale: stri
 
       <ProductGrid title={isArabic ? "توصيل زهور" : "Flowers Delivery"} baseTitle="flowers" locale={params.locale} />
 
+      <section className="py-16 px-4 bg-trust text-white max-w-7xl mx-auto rounded-3xl my-12 shadow-2xl">
+         <div className="max-w-4xl mx-auto space-y-6">
+            <h2 className="text-3xl font-heading font-bold mb-6">{isArabic ? "الفن المعماري لتنسيق الزهور الفاخرة في البحرين" : "The Architecture of Elite Floral Design in Bahrain"}</h2>
+            <div className="text-gray-100 space-y-6 text-lg leading-relaxed font-body">
+               <p>{isArabic ? 
+                  "في فرحتي، نحن نرفض التسوية أو القبول بالزهور العادية. تنسيقاتنا تعتبر معياراً ذهبياً في قطاع الهدايا الفاخرة داخل مملكة البحرين. نحن ندرك تماماً أن إهداء الزهور ليس مجرد معاملة تجارية، بل هو رسالة عاطفية عميقة تتطلب أقصى درجات الاهتمام بالتفاصيل. لذلك، كل باقة تخرج من منشأتنا تمثل تحفة فنية حقيقية صُممت بعناية فائقة لتتجاوز التوقعات وتخلق ذكريات تدوم طويلاً، سواء كنت تهديها في المنامة، الرفاع، المحرق أو الجفير." 
+                  : 
+                  "At Farhati, we categorically reject the ordinary. Our floral arrangements serve as the absolute benchmark for luxury gifting across the Kingdom of Bahrain. We fundamentally understand that gifting flowers is a profound emotional transaction, not merely a retail purchase. To honor this, every single bouquet that leaves our climate-controlled facility is a meticulously crafted masterpiece designed to drastically exceed expectations and create permanent memories, whether delivered to Manama, Riffa, Muharraq, or Juffair."}</p>
+               <p>{isArabic ? 
+                  "سلسلة التوريد الخاصة بنا مصممة بطريقة تضمن جودة لا تُضاهى. لضمان حصولك على أفضل الألوان وأطول عمر للزهور، نقوم باستيراد زهورنا بشكل مباشر وحصري من مزارع النخبة الواقعة على ارتفاعات شاهقة في الإكوادور وهولندا. هذه المزارع المتخصصة تنتج وردًا يتفوق في حجمه، سماكة ساقه، وكثافة بتلاته مقارنة بالأسواق المحلية العادية. عند وصول هذه الزهور إلى البحرين، تدخل فوراً إلى غرف التبريد الخاصة بنا، حيث يتم حفظها في بيئة مثالية من حيث درجة الحرارة والرطوبة لضمان نضارتها التامة حتى لحظة التوصيل."
+                  : 
+                  "Our supply chain is a logistical marvel engineered for uncompromised quality. To guarantee maximum visual impact and dramatically extended vase life, we completely bypass local secondary markets. Instead, we air-freight our stems directly from elite, high-altitude sustainable farms in Ecuador and Holland. These precise environmental conditions produce roses and orchids that are vastly superior in head size, stem thickness, and petal density. Upon arriving in Bahrain, these stems immediately enter our strict cold-chain infrastructure, ensuring they remain in absolute stasis until arranged by our master florists."}</p>
+               <p>{isArabic ?
+                  "عملية التوصيل لدينا في البحرين تعتمد على الثقة والسرعة القصوى. نستخدم أسطولاً خاصاً من السيارات المعزولة والمبردة التي تضمن بقاء الزهور بحالة ممتازة وعدم تعرضها لحرارة الخليج القاسية. سواء كنت تحتاج إلى توصيل مفاجئ في نفس اليوم لحفلة عيد ميلاد في المحرق أو ترتيب استثنائي لاجتماع مهم في خليج البحرين، فإن فريق العمليات الميدانية لدينا يمتلك الكفاءة والاحترافية لتنفيذ المهمة بدقة استثنائية."
+                  :
+                  "Fulfillment in Bahrain demands an extreme approach to temperature control. Our proprietary delivery fleet consists exclusively of heavily insulated, actively refrigerated vehicles. This completely neutralizes the hostile Gulf heat, ensuring your luxury blooms arrive in exactly the pristine condition they left our studio. Whether you require a rapid same-day deployment for a sudden celebration in Muharraq or a highly coordinated, anonymous delivery to a corporate tower in Bahrain Financial Harbour, our field operatives execute the mission with military precision and total discretion."}</p>
+            </div>
+         </div>
+      </section>
+
       <section className="py-16 bg-white px-4">
          <div className="max-w-3xl mx-auto" itemScope itemType="https://schema.org/FAQPage">
             <h2 className="text-3xl font-heading font-bold mb-8 text-center">{isArabic ? "أسئلة شائعة حول طلبات الزهور" : "Flower Delivery FAQs"}</h2>

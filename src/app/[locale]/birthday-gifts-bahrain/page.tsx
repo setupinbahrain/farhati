@@ -55,6 +55,26 @@ export default function BirthdayGiftsPage({ params }: { params: { locale: string
 
       <ProductGrid title={isArabic ? "هدايا أعياد ميلاد" : "Birthday Gifts"} baseTitle="birthday" locale={params.locale} />
 
+      <section className="py-16 px-4 bg-trust text-white max-w-7xl mx-auto rounded-3xl my-12 shadow-2xl">
+         <div className="max-w-4xl mx-auto space-y-6">
+            <h2 className="text-3xl font-heading font-bold mb-6">{isArabic ? "باقات احتفالات أعياد الميلاد المتكاملة والفاخرة في البحرين" : "Comprehensive & Luxurious Birthday Celebrations in Bahrain"}</h2>
+            <div className="text-gray-100 space-y-6 text-lg leading-relaxed font-body">
+               <p>{isArabic ? 
+                  "تخطيط حفلة عيد ميلاد مثالية يتطلب غالباً جهداً استثنائياً لتنسيق الهدايا، المخبوزات والديكور من موردين مختلفين. نحن في فرحتي قمنا بإحداث ثورة في هذه العملية. بدلاً من التعامل مع مخابز متعددة ومحلات زهور منفصلة، توفر لك فرحتي حلاً شاملاً ومتكاملاً لهدايا أعياد الميلاد في البحرين. نقدم باقات موحدة تجمع بين أفخم أنواع الكيك الحرفي، وتنسيقات الزهور المذهلة، وبالونات الهيليوم الفاخرة، لتصل جميعها في نفس الوقت وفي قمة نضارتها." 
+                  : 
+                  "Orchestrating the perfect birthday celebration typically demands extreme logistical effort to coordinate disparate vendors for gifts, baked goods, and decor. At Farhati, we have fundamentally revolutionized this process. Rather than managing fragmented orders from independent bakeries and separate florists, Farhati provides an absolute, frictionless, all-in-one luxury birthday solution in Bahrain. We deploy meticulously synchronized packages that seamlessly integrate master-crafted artisanal cakes, aggressive, high-impact floral arrangements, and premium helium balloon clusters—all arriving perfectly timed and in peak condition."}</p>
+               <p>{isArabic ? 
+                  "كل عنصر من عناصر ترتيبات عيد الميلاد يخضع لمعايير الجودة الصارمة الخاصة بنا. المخبوزات تصنع يومياً ولا نعتمد أبداً على المنتجات المجمدة، والبالونات تُملأ بهيليوم عالي النقاء مصمم للبقاء في الهواء لأطول فترة ممكنة لتستمر الحفلة بأفضل صورة. كما أن الورود التي نضيفها مستوردة خصيصاً من الخارج لتتميز برونق وألوان تخطف الأنظار فور إخراجها من الصندوق."
+                  : 
+                  "Every individual component within our birthday bundles is subject to our punishingly strict quality assurance protocols. Our baking division strictly prohibits frozen inventory; every cake is fired and iced on the precise day of dispatch. Furthermore, our balloon technicians utilize exclusively extreme-purity helium engineered to maximize float-time duration, ensuring the celebratory atmosphere persists flawlessly. The integrated floral segments utilize our signature imported stems, guaranteeing an aesthetic impact that literally commands attention the second the package is unboxed."}</p>
+               <p>{isArabic ?
+                  "ولأن المفاجأة هي أهم عنصر في أي عيد ميلاد، فإن الخدمات الميدانية لدينا مجهزة بالكامل للوصول بدقة تامة في المواعيد המحددة، سواء كنت تخطط للوصول خلال تجمع في مطعم بالمنامة، أو حفلة خاصة في فيلا بالرفاع. جميع سياراتنا مكيفة بالكامل لكي يصل الكيك بحالته المثالية وتبقى الزهور يانعة، محققين بذلك تجربة إهداء ترفع سقف التوقعات وتجعل يوم من تحب استثنائياً بكل المقاييس."
+                  :
+                  "Because the element of surprise is the most critical variable in a successful birthday deployment, our field logistics division is heavily trained to execute precision, time-critical arrivals. Whether you are staging an ambush celebration at a high-end restaurant in Manama or coordinating a private villa event in Riffa, our dispatch operations perfectly align with your schedule. Crucially, our entire deployment fleet is insulated and climate-controlled, meaning the cake frosting remains pristine and the flowers violently fresh upon arrival. We don't just deliver gifts; we engineer unforgettable, zero-stress celebratory experiences."}</p>
+            </div>
+         </div>
+      </section>
+
       <section className="py-16 bg-white px-4">
          <div className="max-w-3xl mx-auto" itemScope itemType="https://schema.org/FAQPage">
             <h2 className="text-3xl font-heading font-bold mb-8 text-center">{isArabic ? "أسئلة شائعة حول ترتيبات أعياد الميلاد" : "Birthday Arrangement FAQs"}</h2>

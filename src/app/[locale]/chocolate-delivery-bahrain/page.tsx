@@ -55,6 +55,26 @@ export default function ChocolateDeliveryPage({ params }: { params: { locale: st
 
       <ProductGrid title={isArabic ? "توصيل شوكولاتة" : "Chocolate Delivery"} baseTitle="chocolate" locale={params.locale} />
 
+      <section className="py-16 px-4 bg-trust text-white max-w-7xl mx-auto rounded-3xl my-12 shadow-2xl">
+         <div className="max-w-4xl mx-auto space-y-6">
+            <h2 className="text-3xl font-heading font-bold mb-6">{isArabic ? "الشوكولاتة السويسرية والبلجيكية: تجربة ذواقة في البحرين" : "Swiss & Belgian Chocolate: A Gourmet Experience in Bahrain"}</h2>
+            <div className="text-gray-100 space-y-6 text-lg leading-relaxed font-body">
+               <p>{isArabic ? 
+                  "نحن نؤمن بأن الشوكولاتة الفاخرة تتحدث لغة عالمية من الرفاهية والعمق. كل صندوق هدايا نوفره يمثل رحلة استثنائية من النكهات المنسقة بعناية للذواقة وأصحاب الذوق الرفيع. نستورد أفضل أنواع الكاكاو عالمياً لتقديم تجربة حيوية من حلاوة الكراميل الداكنة إلى حلاوة الحليب الكريمي. في البحرين، من غير المقبول تقديم شوكولاتة ذائبة أو تالفة بسبب حرارة الجو، ولذلك وضعنا معايير صارمة جداً تركز على سلامة المنتجات في جميع الأوقات." 
+                  : 
+                  "We fundamentally believe that true luxury chocolate articulates a universal language of opulence and depth. Every single curated gift box we provide represents an exceptional flavor journey, specifically designed for genuine gourmands and individuals with highly refined palates. We globally source the absolute finest cocoa to deliver a dynamic experience ranging from intensely dark, bitter truffles to impossibly smooth, creamy milk praglines. Within the harsh climate of Bahrain, it is entirely unacceptable to deliver compromised or melted chocolate, which is why our strict operational standards prioritize product integrity at all times."}</p>
+               <p>{isArabic ? 
+                  "جودة الشوكولاتة تبدأ من زراعة حبوب الكاكاو، لهذا نتعامل حصرياً مع موردين ذوي سمعة عالمية وتاريخ عريق في بلجيكا وسويسرا للابتعاد عن المنتجات الرخيصة والمقلدة. إن صناديق الشوكولاتة التي لدينا ليست مجرد تغليف جميل، بل هي قطع فنية تضم مكونات حقيقية بدون إضافات اصطناعية مبالغ فيها، سواء كانت شوكولاتة بالحليب تعكس عراقة المزارع السويسرية الجبلية، أو الشوكولاتة الداكنة ذات الأصل الواحد."
+                  : 
+                  "The ultimate quality of chocolate originates at the cocoa bean cultivation stage. We completely bypass mass-market manufacturers and deal exclusively with world-renowned, sustainably certified suppliers boasting deep historical roots in both Belgium and Switzerland. Our premium chocolate assortments are not merely aesthetically pleasing packaging; they are edible culinary art pieces made with authentic, unadulterated ingredients. Whether it’s velvety milk chocolate reflecting the heritage of alpine Swiss farms, or aggressive, single-origin dark chocolate, zero artificial extenders are utilized."}</p>
+               <p>{isArabic ?
+                  "ولحماية هذه الروائع الهشة، تم تجهيز أسطولنا حصرياً بمقصورات مبردة معزولة حرارياً بالكامل لضمان بقائها بدرجة حرارة ثابتة حتى خلال أشد أيام الصيف حرارة في المنامة والمحرق. وبمجرد استلام طلبك عبر منصتنا المتقدمة وسهلة الاستخدام، يتم تغليف صندوق الهدايا بشكل فاخر وتجهيزه للتسليم السريع. سواء كنت ترغب في مفاجأة شريكك، مكافأة موظفيك بتميز، أو تقديم هدية تعتذر بها بصمت، فإن صناديق الشوكولاتة الفاخرة لدينا قادرة على إيصال رسالتك بكل براعة ورقي."
+                  :
+                  "To actively protect these fragile masterpieces, our delivery fleet is exclusively outfitted with fully thermal-insulated, heavily refrigerated cargo holds. This guarantees absolute temperature stabilization even during the most aggressive summer heatwaves spanning Manama, Riffa, and Seef. Once your order is processed via our frictionless digital platform, the selected chocolate assortment is secured in premium, bespoke packaging and dispatched rapidly. Whether you aim to surprise a highly valued partner, reward top-tier executives, or offer a profound gesture of apology, our luxury chocolate collections eloquently articulate your intention with absolute sophistication."}</p>
+            </div>
+         </div>
+      </section>
+
       <section className="py-16 bg-white px-4">
          <div className="max-w-3xl mx-auto" itemScope itemType="https://schema.org/FAQPage">
             <h2 className="text-3xl font-heading font-bold mb-8 text-center">{isArabic ? "أسئلة شائعة حول توصيل الشوكولاتة" : "Chocolate Delivery FAQs"}</h2>

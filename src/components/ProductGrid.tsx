@@ -24,10 +24,11 @@ export default function ProductGrid({ title, baseTitle, locale = 'en' }: { title
   };
 
   const titleLower = title.toLowerCase();
-  const isCake = titleLower.includes('cake');
-  const isFlower = titleLower.includes('flower') || titleLower.includes('bouquet') || titleLower.includes('rose');
-  const isCombo = titleLower.includes('combo') || titleLower.includes('and');
-  const isChocolate = titleLower.includes('chocolate');
+  const checkStr = `${titleLower} ${baseTitle?.toLowerCase() || ''}`;
+  const isCake = checkStr.includes('cake') || checkStr.includes('كيك');
+  const isFlower = checkStr.includes('flower') || checkStr.includes('bouquet') || checkStr.includes('rose') || checkStr.includes('زهور') || checkStr.includes('ورد');
+  const isCombo = checkStr.includes('combo') || checkStr.includes('and') || checkStr.includes('باقات');
+  const isChocolate = checkStr.includes('chocolate') || checkStr.includes('شوكولاتة');
   
   // Isolate the image feed based strictly on the active dynamic category
   let images = ['/images/editorial_luxury_combo_1775846441612.png'];
@@ -61,6 +62,19 @@ export default function ProductGrid({ title, baseTitle, locale = 'en' }: { title
     ];
   }
 
+  const translateProductType = (key?: string) => {
+    if (!key) return title;
+    if (!isArabic) return key.charAt(0).toUpperCase() + key.slice(1).replace(/-/g, ' ');
+    const k = key.toLowerCase();
+    if (k.includes('flower')) return 'الزهور';
+    if (k.includes('cake')) return 'الكيك';
+    if (k.includes('chocolate')) return 'الشوكولاتة';
+    if (k.includes('birthday')) return 'أعياد الميلاد';
+    if (k.includes('gift') || k.includes('luxury')) return 'الهدايا الفاخرة';
+    return title;
+  };
+  const productKeyName = translateProductType(baseTitle || title);
+
   return (
     <section id="products" className="py-16 px-4 max-w-7xl mx-auto w-full">
       <h2 className="text-3xl font-heading font-bold text-gray-900 mb-8 text-center">{isArabic ? `الأفضل مبيعاً في ${title}` : `Top Rated ${title}`}</h2>
@@ -88,14 +102,14 @@ export default function ProductGrid({ title, baseTitle, locale = 'en' }: { title
             </div>
             
             <h4 className={`font-bold text-[#1A1A1A] text-sm md:text-base line-clamp-2 ${isArabic ? 'text-right' : ''}`}>
-               {isArabic ? `مجموعة فاخرة: ${baseTitle || title} ${item}` : `Exclusive ${baseTitle || title} Bundle ${item}`}
+               {isArabic ? `مجموعة ${productKeyName} فاخرة (${item})` : `Exclusive ${productKeyName} Bundle ${item}`}
             </h4>
             <p className={`text-primary font-bold mt-2 text-lg ${isArabic ? 'text-right' : ''}`}>35.00 {isArabic ? 'د.ب' : 'BHD'}</p>
             
             <button 
                onClick={() => addItem({
                   id: `${title.toLowerCase().replace(/ /g, '-')}-${item}`,
-                  name: `Exclusive ${title} Bundle ${item}`,
+                  name: `Exclusive ${productKeyName} Bundle ${item}`,
                   price: 35,
                   quantity: 1,
                   image: ''
