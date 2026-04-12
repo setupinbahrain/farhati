@@ -9,9 +9,8 @@ type Props = {
   params: { locale: string; slug: string[] };
 };
 
-export function generateStaticParams() {
-  return []; 
-}
+export const dynamic = 'force-dynamic';
+export const revalidate = 0;
 
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const { slug: slugArray, locale } = params;

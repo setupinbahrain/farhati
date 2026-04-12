@@ -1,4 +1,8 @@
 import { Metadata } from "next";
+
+export const dynamic = 'force-dynamic';
+export const revalidate = 0;
+
 import ProductGrid from "@/components/ProductGrid";
 import SEO from "@/components/SEO";
 
